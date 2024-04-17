@@ -83,6 +83,7 @@ tasks.withType<org.jetbrains.kotlin.gradle.tasks.KotlinCompile>().configureEach 
 
 tasks.named<Test>("jvmTest") {
    useJUnitPlatform()
+   maxParallelForks = 6
    filter {
       isFailOnNoMatchingTests = false
    }

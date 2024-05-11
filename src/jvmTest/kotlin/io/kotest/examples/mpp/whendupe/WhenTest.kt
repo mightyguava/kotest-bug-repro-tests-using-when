@@ -11,6 +11,7 @@ enum class Hello {
 
 class BarTests : FunSpec({
    test("bad when") {
+      println("BarTests.bad when: pid=${ProcessHandle.current().pid()}, thread=${Thread.currentThread().id}")
       val num = Hello.A
 
       when (num) {
